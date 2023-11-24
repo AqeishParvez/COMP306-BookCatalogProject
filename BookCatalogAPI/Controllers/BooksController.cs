@@ -13,111 +13,67 @@ namespace BookCatalogAPI.Controllers
     [ApiController]
     public class BooksController : ControllerBase
     {
-        private readonly APIDbContext _context;
+        private readonly IBookRepository _bookRepository;
 
-        public BooksController(APIDbContext context)
+        public BooksController(IBookRepository bookRepository)
         {
-            _context = context;
+            _bookRepository = bookRepository;
         }
 
         // GET: api/Books
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Book>>> GetBooks()
+        public ActionResult<IEnumerable<Book>> GetBooks()
         {
-          if (_context.Books == null)
-          {
-              return NotFound();
-          }
-            return await _context.Books.ToListAsync();
+            var books = _bookRepository.GetAllBooks();
+            return Ok(books);
         }
 
         // GET: api/Books/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Book>> GetBook(int id)
+        public ActionResult<Book> GetBook(int id)
         {
-          if (_context.Books == null)
-          {
-              return NotFound();
-          }
-            var book = await _context.Books.FindAsync(id);
+            var book = _bookRepository.GetBookById(id);
 
             if (book == null)
             {
                 return NotFound();
             }
 
-            return book;
+            return Ok(book);
         }
 
         // PUT: api/Books/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutBook(int id, Book book)
+        public IActionResult PutBook(int id, Book book)
         {
             if (id != book.BookId)
             {
                 return BadRequest();
             }
 
-            _context.Entry(book).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!BookExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
+            _bookRepository.UpdateBook(book);
             return NoContent();
         }
 
         // POST: api/Books
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Book>> PostBook(Book book)
+        public ActionResult<Book> PostBook(Book book)
         {
-          if (_context.Books == null)
-          {
-              return Problem("Entity set 'APIDbContext.Books'  is null.");
-          }
-            _context.Books.Add(book);
-            await _context.SaveChangesAsync();
-
+            _bookRepository.AddBook(book);
             return CreatedAtAction("GetBook", new { id = book.BookId }, book);
         }
 
         // DELETE: api/Books/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteBook(int id)
+        public IActionResult DeleteBook(int id)
         {
-            if (_context.Books == null)
-            {
-                return NotFound();
-            }
-            var book = await _context.Books.FindAsync(id);
-            if (book == null)
-            {
-                return NotFound();
-            }
-
-            _context.Books.Remove(book);
-            await _context.SaveChangesAsync();
-
+            _bookRepository.DeleteBook(id);
             return NoContent();
         }
 
         private bool BookExists(int id)
         {
-            return (_context.Books?.Any(e => e.BookId == id)).GetValueOrDefault();
+            return (_bookRepository.GetBookById(id) != null);
         }
     }
 }

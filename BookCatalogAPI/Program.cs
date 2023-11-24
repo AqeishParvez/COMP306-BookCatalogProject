@@ -20,6 +20,7 @@ namespace BookCatalogAPI
             //Dependency Injection of DbContext Class
             builder.Services.AddDbContext<APIDbContext>(options => 
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddScoped<IBookRepository, BookRepository>();
 
             var app = builder.Build();
 
@@ -37,5 +38,7 @@ namespace BookCatalogAPI
 
             app.Run();
         }
+
+
     }
 }
