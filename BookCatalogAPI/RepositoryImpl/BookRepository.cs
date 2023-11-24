@@ -1,4 +1,4 @@
-﻿namespace BookCatalogAPI
+﻿namespace BookCatalogAPI.RepositoryImpl
 {
     using BookCatalogAPI.Models;
     // BookRepository.cs

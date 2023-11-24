@@ -1,5 +1,7 @@
 
 using BookCatalogAPI.Models;
+using BookCatalogAPI.RepositoryImpl;
+using BookCatalogAPI.RepositoryInterface;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookCatalogAPI
