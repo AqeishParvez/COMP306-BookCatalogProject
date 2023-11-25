@@ -10,6 +10,8 @@ using BookCatalogAPI.RepositoryInterface;
 using AutoMapper;
 using BookCatalogAPI.DtoClasses;
 using static System.Reflection.Metadata.BlobBuilder;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace BookCatalogAPI.Controllers
 {
@@ -65,6 +67,79 @@ namespace BookCatalogAPI.Controllers
             _bookRepository.UpdateBook(book);
             return NoContent();
         }
+
+
+        [HttpPatch("{id}")]
+        public IActionResult PatchBook(int id, [FromBody] UpdateBookDto updatedBookDto)
+        {
+            if (updatedBookDto == null)
+            {
+                return BadRequest("Invalid request body");
+            }
+
+            var existingBook = _bookRepository.GetBookById(id);
+
+            if (existingBook == null)
+            {
+                return NotFound();
+            }
+
+            // Apply patch operations manually
+            if (!ApplyPatchOperations(updatedBookDto, existingBook))
+            {
+                return BadRequest("Invalid patch operations");
+            }
+
+            // Validate the updated entity
+            if (!TryValidateModel(existingBook))
+            {
+                return ValidationProblem(ModelState);
+            }
+
+            // Update the entity in the repository
+            _bookRepository.UpdateBook(existingBook);
+
+            return NoContent();
+        }
+
+        private bool ApplyPatchOperations(UpdateBookDto updatedBookDto, Book existingBook)
+        {
+            bool IsPatched = false;
+            // Apply patch operations manually
+            // Example: Only handle "replace" operation for the "Title" property
+            if (updatedBookDto.Title != null)
+            {
+                existingBook.Title = updatedBookDto.Title;
+                IsPatched = true;
+            }
+             if (updatedBookDto.Isbn != null)
+            {
+                existingBook.Isbn = updatedBookDto.Isbn;
+                IsPatched = true;
+            }
+             if (updatedBookDto.Author != null)
+            {
+                existingBook.Author = updatedBookDto.Author;
+                IsPatched = true;
+            }
+             if (updatedBookDto.Description != null)
+            {
+                existingBook.Description = updatedBookDto.Description;
+                IsPatched = true;
+            }
+             if (updatedBookDto.Category != null)
+            {
+                existingBook.Category = updatedBookDto.Category;
+                IsPatched = true;
+            }
+
+            // Add more operations for other properties as needed
+
+            // Return true if patch operations were successfully applied
+            return true;
+        }
+
+
 
         // POST: api/Books
         [HttpPost]

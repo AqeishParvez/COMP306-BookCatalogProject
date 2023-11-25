@@ -508,3 +508,6 @@ C:\C#_Projects\lab4\BookCatalogAPI\obj\Debug\net7.0\BookCatalogAPI.genruntimecon
 C:\C#_Projects\lab4\BookCatalogAPI\obj\Debug\net7.0\ref\BookCatalogAPI.dll
 C:\C#_Projects\lab4\BookCatalogAPI\bin\Debug\net7.0\AutoMapper.dll
 C:\C#_Projects\lab4\BookCatalogAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\C#_Projects\lab4\BookCatalogAPI\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\C#_Projects\lab4\BookCatalogAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\C#_Projects\lab4\BookCatalogAPI\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
