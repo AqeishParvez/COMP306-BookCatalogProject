@@ -3,6 +3,9 @@ using BookCatalogAPI.Models;
 using BookCatalogAPI.RepositoryImpl;
 using BookCatalogAPI.RepositoryInterface;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using Microsoft.AspNetCore.Hosting;
+using BookCatalogAPI.DtoClasses;
 
 namespace BookCatalogAPI
 {
@@ -23,6 +26,8 @@ namespace BookCatalogAPI
             builder.Services.AddDbContext<APIDbContext>(options => 
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             builder.Services.AddScoped<IBookRepository, BookRepository>();
+            builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
+            
 
             var app = builder.Build();
 

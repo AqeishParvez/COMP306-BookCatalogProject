@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BookCatalogAPI.Models;
 using BookCatalogAPI.RepositoryInterface;
+using AutoMapper;
+using BookCatalogAPI.DtoClasses;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace BookCatalogAPI.Controllers
 {
@@ -15,23 +18,30 @@ namespace BookCatalogAPI.Controllers
     public class BooksController : ControllerBase
     {
         private readonly IBookRepository _bookRepository;
+        private readonly IMapper _mapper;
 
-        public BooksController(IBookRepository bookRepository)
+        public BooksController(IBookRepository bookRepository, IMapper mapper)
         {
             _bookRepository = bookRepository;
+            _mapper = mapper;
         }
 
         // GET: api/Books
         [HttpGet]
-        public ActionResult<IEnumerable<Book>> GetBooks()
+        // return type is a collection of BookDto type rather the Book type
+        public ActionResult<IEnumerable<BookDto>> GetBooks()
         {
+            // get collection of book type, then map them to the BookDto type
             var books = _bookRepository.GetAllBooks();
-            return Ok(books);
+            var bookDtos = _mapper.Map<IEnumerable<BookDto>>(books);
+
+            // return BookDto type
+            return Ok(bookDtos);
         }
 
         // GET: api/Books/5
         [HttpGet("{id}")]
-        public ActionResult<Book> GetBook(int id)
+        public ActionResult<BookDto> GetBook(int id)
         {
             var book = _bookRepository.GetBookById(id);
 
@@ -39,8 +49,8 @@ namespace BookCatalogAPI.Controllers
             {
                 return NotFound();
             }
-
-            return Ok(book);
+            var bookDto = _mapper.Map<BookDto>(book);
+            return Ok(bookDto);
         }
 
         // PUT: api/Books/5
@@ -58,10 +68,14 @@ namespace BookCatalogAPI.Controllers
 
         // POST: api/Books
         [HttpPost]
-        public ActionResult<Book> PostBook(Book book)
+        public ActionResult<BookDto> PostBook(CreateBookDto createBookDto)
         {
-            _bookRepository.AddBook(book);
-            return CreatedAtAction("GetBook", new { id = book.BookId }, book);
+            var newBook = _mapper.Map<Book>(createBookDto);
+            _bookRepository.AddBook(newBook);
+
+            var newBookDto = _mapper.Map<BookDto>(newBook);
+
+            return CreatedAtAction(nameof(GetBook), new { id = newBookDto.BookId }, newBookDto);
         }
 
         // DELETE: api/Books/5

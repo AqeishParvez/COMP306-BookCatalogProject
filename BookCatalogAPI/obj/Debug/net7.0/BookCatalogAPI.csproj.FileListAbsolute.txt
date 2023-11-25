@@ -506,3 +506,5 @@ C:\C#_Projects\lab4\BookCatalogAPI\obj\Debug\net7.0\refint\BookCatalogAPI.dll
 C:\C#_Projects\lab4\BookCatalogAPI\obj\Debug\net7.0\BookCatalogAPI.pdb
 C:\C#_Projects\lab4\BookCatalogAPI\obj\Debug\net7.0\BookCatalogAPI.genruntimeconfig.cache
 C:\C#_Projects\lab4\BookCatalogAPI\obj\Debug\net7.0\ref\BookCatalogAPI.dll
+C:\C#_Projects\lab4\BookCatalogAPI\bin\Debug\net7.0\AutoMapper.dll
+C:\C#_Projects\lab4\BookCatalogAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

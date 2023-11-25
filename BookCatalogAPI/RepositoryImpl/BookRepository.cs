@@ -1,5 +1,6 @@
 ﻿namespace BookCatalogAPI.RepositoryImpl
 {
+    using BookCatalogAPI.RepositoryInterface;
     using BookCatalogAPI.Models;
     // BookRepository.cs
     using System.Linq;
