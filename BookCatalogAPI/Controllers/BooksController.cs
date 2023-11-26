@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using BookCatalogAPI.Models;
+using BookInfoLibrary;
 using BookCatalogAPI.RepositoryInterface;
 using AutoMapper;
 using BookCatalogAPI.DtoClasses;
@@ -19,65 +19,71 @@ namespace BookCatalogAPI.Controllers
     [ApiController]
     public class BooksController : ControllerBase
     {
-        private readonly IBookRepository _bookRepository;
+        private readonly IBookInfoRepository _bookInfoRepository;
         private readonly IMapper _mapper;
 
-        public BooksController(IBookRepository bookRepository, IMapper mapper)
+        public BooksController(IBookInfoRepository bookInfoRepository, IMapper mapper)
         {
-            _bookRepository = bookRepository;
+            _bookInfoRepository = bookInfoRepository;
             _mapper = mapper;
         }
 
         // GET: api/Books
         [HttpGet]
-        // return type is a collection of BookDto type rather the Book type
-        public ActionResult<IEnumerable<BookDto>> GetBooks()
+        public async Task<ActionResult<IEnumerable<BookDto>>> GetAllBooks()
         {
-            // get collection of book type, then map them to the BookDto type
-            var books = _bookRepository.GetAllBooks();
+            var books = await _bookInfoRepository.GetAllBooksAsync();
             var bookDtos = _mapper.Map<IEnumerable<BookDto>>(books);
 
-            // return BookDto type
             return Ok(bookDtos);
         }
 
         // GET: api/Books/5
         [HttpGet("{id}")]
-        public ActionResult<BookDto> GetBook(int id)
+        public async Task<ActionResult<BookDto>> GetBookById(string bookId)
         {
-            var book = _bookRepository.GetBookById(id);
+            var book = await _bookInfoRepository.GetBookByIdAsync(bookId);
 
             if (book == null)
             {
                 return NotFound();
             }
+
             var bookDto = _mapper.Map<BookDto>(book);
+
             return Ok(bookDto);
         }
 
         // PUT: api/Books/5
         [HttpPut("{id}")]
-        public IActionResult PutBook(int id, Book book)
+        public async Task<ActionResult<BookDto>> UpdateBook(string bookId, [FromBody] BookUpdateDto bookUpdateDto)
         {
-            if (id != book.BookId)
+            var existingBook = await _bookInfoRepository.GetBookByIdAsync(bookId);
+
+            if (existingBook == null)
             {
-                return BadRequest();
+                return NotFound();
             }
 
-            _bookRepository.UpdateBook(book);
-            return NoContent();
+            _mapper.Map(bookUpdateDto, existingBook);
+
+            await _bookInfoRepository.UpdateBookAsync(bookId, existingBook);
+
+            var updatedBookDto = _mapper.Map<BookDto>(existingBook);
+
+            return Ok(updatedBookDto);
         }
 
 
         [HttpPatch("{id}")]
-        public IActionResult PatchBook(int id, [FromBody] UpdateBookDto updatedBookDto)
+        public async Task<ActionResult<BookDto>> PatchBook(string bookId, [FromBody] BookUpdateDto bookUpdateDto)
         {
-            if (updatedBookDto == null)
+            if (bookUpdateDto == null)
             {
                 return BadRequest("Invalid request body");
             }
 
-            var existingBook = _bookRepository.GetBookById(id);
+            var existingBook = await _bookInfoRepository.GetBookByIdAsync(bookId);
 
             if (existingBook == null)
             {
@@ -85,7 +91,7 @@ namespace BookCatalogAPI.Controllers
             }
 
             // Apply patch operations manually
-            if (!ApplyPatchOperations(updatedBookDto, existingBook))
+            if (!ApplyPatchOperations(bookUpdateDto, existingBook))
             {
                 return BadRequest("Invalid patch operations");
             }
@@ -97,73 +103,79 @@ namespace BookCatalogAPI.Controllers
             }
 
             // Update the entity in the repository
-            _bookRepository.UpdateBook(existingBook);
+            await _bookInfoRepository.UpdateBookAsync(bookId, existingBook);
 
-            return NoContent();
+            // Map the updated book to BookDto for the response
+            var updatedBookDto = _mapper.Map<BookDto>(existingBook);
+
+            return Ok(updatedBookDto);
         }
 
-        private bool ApplyPatchOperations(UpdateBookDto updatedBookDto, Book existingBook)
+        private bool ApplyPatchOperations(BookUpdateDto updatedBookDto, Book existingBook)
         {
-            bool IsPatched = false;
+            bool isPatched = false;
+
             // Apply patch operations manually
-            // Example: Only handle "replace" operation for the "Title" property
+            // Example: Only handle "replace" operation for specified properties
             if (updatedBookDto.Title != null)
             {
                 existingBook.Title = updatedBookDto.Title;
-                IsPatched = true;
+                isPatched = true;
             }
-             if (updatedBookDto.Isbn != null)
-            {
-                existingBook.Isbn = updatedBookDto.Isbn;
-                IsPatched = true;
-            }
-             if (updatedBookDto.Author != null)
+
+            if (updatedBookDto.Author != null)
             {
                 existingBook.Author = updatedBookDto.Author;
-                IsPatched = true;
+                isPatched = true;
             }
-             if (updatedBookDto.Description != null)
+
+            if (updatedBookDto.PdfFilePath != null)
             {
-                existingBook.Description = updatedBookDto.Description;
-                IsPatched = true;
+                existingBook.PdfFilePath = updatedBookDto.PdfFilePath;
+                isPatched = true;
             }
-             if (updatedBookDto.Category != null)
+
+            if (updatedBookDto.PageCount > 0)
             {
-                existingBook.Category = updatedBookDto.Category;
-                IsPatched = true;
+                existingBook.PageCount = updatedBookDto.PageCount;
+                isPatched = true;
             }
 
             // Add more operations for other properties as needed
 
             // Return true if patch operations were successfully applied
-            return true;
+            return isPatched;
         }
+
 
 
 
         // POST: api/Books
         [HttpPost]
-        public ActionResult<BookDto> PostBook(CreateBookDto createBookDto)
+        public async Task<ActionResult<BookDto>> AddBook([FromBody] BookCreateDto bookCreateDto)
         {
-            var newBook = _mapper.Map<Book>(createBookDto);
-            _bookRepository.AddBook(newBook);
+            var book = _mapper.Map<Book>(bookCreateDto);
+            await _bookInfoRepository.AddBookAsync(book);
 
-            var newBookDto = _mapper.Map<BookDto>(newBook);
+            var bookDto = _mapper.Map<BookDto>(book);
 
-            return CreatedAtAction(nameof(GetBook), new { id = newBookDto.BookId }, newBookDto);
+            return CreatedAtAction(nameof(GetBookById), new { bookId = bookDto.Id }, bookDto);
         }
 
         // DELETE: api/Books/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteBook(int id)
+        public async Task<IActionResult> DeleteBook(string bookId)
         {
-            _bookRepository.DeleteBook(id);
-            return NoContent();
-        }
+            var existingBook = await _bookInfoRepository.GetBookByIdAsync(bookId);
 
-        private bool BookExists(int id)
-        {
-            return (_bookRepository.GetBookById(id) != null);
+            if (existingBook == null)
+            {
+                return NotFound();
+            }
+
+            await _bookInfoRepository.DeleteBookAsync(bookId);
+
+            return NoContent();
         }
     }
 }

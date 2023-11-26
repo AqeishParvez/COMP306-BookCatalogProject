@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using BookCatalogAPI.Models;
+using BookInfoLibrary;
 
 namespace BookCatalogAPI.DtoClasses
 
@@ -9,13 +9,13 @@ namespace BookCatalogAPI.DtoClasses
         public AutoMapperProfiles()
         {
             CreateMap<Book, BookDto>();
-            CreateMap<BookDto, Book>();
+            //CreateMap<BookDto, Book>();
 
-            CreateMap<CreateBookDto, Book>();
-            CreateMap<Book, CreateBookDto>();
+            CreateMap<BookCreateDto, Book>();
+            //CreateMap<Book, BookCreateDto>();
 
-            CreateMap<Book, UpdateBookDto>();
-            CreateMap<UpdateBookDto, Book>();
+            //CreateMap<Book, BookUpdateDto>();
+            CreateMap<BookUpdateDto, Book>();
 
         }
     }

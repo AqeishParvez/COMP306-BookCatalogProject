@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "0B/Ayca+Nx6n2oDCB850f55E5Vaz3Ac/+SzvguxQFPJ1jk64EFWcjQ2WCaS67HChgW/TxZ/xTGgOtbhS3lKdPA==",
+  "success": true,
+  "projectFilePath": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookInfoLibrary\\BookInfoLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hp\\.nuget\\packages\\mongodb.bson\\2.22.0\\mongodb.bson.2.22.0.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

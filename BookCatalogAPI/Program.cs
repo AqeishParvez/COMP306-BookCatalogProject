@@ -9,6 +9,7 @@ using BookCatalogAPI.DtoClasses;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using MongoDB.Driver;
 
 namespace BookCatalogAPI
 {
@@ -25,10 +26,27 @@ namespace BookCatalogAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            //Dependency Injection of DbContext Class
-            builder.Services.AddDbContext<APIDbContext>(options => 
-            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-            builder.Services.AddScoped<IBookRepository, BookRepository>();
+
+
+            //Dependency Injection of DbContext Class now being replaced with MongoDB
+            //builder.Services.AddDbContext<APIDbContext>(options => 
+            //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            //Configure MongoDB Connection
+            var mongoDbSettings = builder.Configuration.GetSection("MongoDBSettings");
+            var connectionString = mongoDbSettings.GetValue<string>("ConnectionString");
+            var databaseName = mongoDbSettings.GetValue<string>("DatabaseName");
+
+            builder.Services.AddSingleton<IMongoClient>(new MongoClient(connectionString));
+            builder.Services.AddSingleton<IMongoDatabase>(provider =>
+            {
+                var client = provider.GetService<IMongoClient>();
+                return client.GetDatabase(databaseName);
+            });
+
+
+
+            builder.Services.AddScoped<IBookInfoRepository, BookInfoRepository>();
             builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
             //builder.Services.AddControllers()
             //.AddNewtonsoftJson(options =>
