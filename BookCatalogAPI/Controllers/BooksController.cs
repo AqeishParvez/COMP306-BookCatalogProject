@@ -12,10 +12,11 @@ using BookCatalogAPI.DtoClasses;
 using static System.Reflection.Metadata.BlobBuilder;
 using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 using Microsoft.AspNetCore.JsonPatch;
+using MongoDB.Bson;
 
 namespace BookCatalogAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class BooksController : ControllerBase
     {
@@ -39,10 +40,10 @@ namespace BookCatalogAPI.Controllers
         }
 
         // GET: api/Books/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<BookDto>> GetBookById(string bookId)
+        [HttpGet("{Id}")]
+        public async Task<ActionResult<BookDto>> GetBookById(string Id)
         {
-            var book = await _bookInfoRepository.GetBookByIdAsync(bookId);
+            var book = await _bookInfoRepository.GetBookByIdAsync(Id);
 
             if (book == null)
             {
@@ -55,10 +56,10 @@ namespace BookCatalogAPI.Controllers
         }
 
         // PUT: api/Books/5
-        [HttpPut("{id}")]
-        public async Task<ActionResult<BookDto>> UpdateBook(string bookId, [FromBody] BookUpdateDto bookUpdateDto)
+        [HttpPut("{Id}")]
+        public async Task<ActionResult<BookDto>> UpdateBook(string Id, [FromBody] BookUpdateDto bookUpdateDto)
         {
-            var existingBook = await _bookInfoRepository.GetBookByIdAsync(bookId);
+            var existingBook = await _bookInfoRepository.GetBookByIdAsync(Id);
 
             if (existingBook == null)
             {
@@ -67,7 +68,7 @@ namespace BookCatalogAPI.Controllers
 
             _mapper.Map(bookUpdateDto, existingBook);
 
-            await _bookInfoRepository.UpdateBookAsync(bookId, existingBook);
+            await _bookInfoRepository.UpdateBookAsync(Id, existingBook);
 
             var updatedBookDto = _mapper.Map<BookDto>(existingBook);
 
@@ -75,15 +76,15 @@ namespace BookCatalogAPI.Controllers
         }
 
 
-        [HttpPatch("{id}")]
-        public async Task<ActionResult<BookDto>> PatchBook(string bookId, [FromBody] BookUpdateDto bookUpdateDto)
+        [HttpPatch("{Id}")]
+        public async Task<ActionResult<BookDto>> PatchBook(string Id, [FromBody] BookUpdateDto bookUpdateDto)
         {
             if (bookUpdateDto == null)
             {
                 return BadRequest("Invalid request body");
             }
 
-            var existingBook = await _bookInfoRepository.GetBookByIdAsync(bookId);
+            var existingBook = await _bookInfoRepository.GetBookByIdAsync(Id);
 
             if (existingBook == null)
             {
@@ -103,7 +104,7 @@ namespace BookCatalogAPI.Controllers
             }
 
             // Update the entity in the repository
-            await _bookInfoRepository.UpdateBookAsync(bookId, existingBook);
+            await _bookInfoRepository.UpdateBookAsync(Id, existingBook);
 
             // Map the updated book to BookDto for the response
             var updatedBookDto = _mapper.Map<BookDto>(existingBook);
@@ -159,21 +160,21 @@ namespace BookCatalogAPI.Controllers
 
             var bookDto = _mapper.Map<BookDto>(book);
 
-            return CreatedAtAction(nameof(GetBookById), new { bookId = bookDto.Id }, bookDto);
+            return CreatedAtAction(nameof(GetBookById), new { id = bookDto.Id }, bookDto);
         }
 
         // DELETE: api/Books/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteBook(string bookId)
+        [HttpDelete("{Id}")]
+        public async Task<IActionResult> DeleteBook(string Id)
         {
-            var existingBook = await _bookInfoRepository.GetBookByIdAsync(bookId);
+            var existingBook = await _bookInfoRepository.GetBookByIdAsync(Id);
 
             if (existingBook == null)
             {
                 return NotFound();
             }
 
-            await _bookInfoRepository.DeleteBookAsync(bookId);
+            await _bookInfoRepository.DeleteBookAsync(Id);
 
             return NoContent();
         }

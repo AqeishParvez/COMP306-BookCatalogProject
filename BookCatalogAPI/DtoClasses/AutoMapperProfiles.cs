@@ -9,12 +9,12 @@ namespace BookCatalogAPI.DtoClasses
         public AutoMapperProfiles()
         {
             CreateMap<Book, BookDto>();
-            //CreateMap<BookDto, Book>();
+            CreateMap<BookDto, Book>();
 
             CreateMap<BookCreateDto, Book>();
-            //CreateMap<Book, BookCreateDto>();
+            CreateMap<Book, BookCreateDto>();
 
-            //CreateMap<Book, BookUpdateDto>();
+            CreateMap<Book, BookUpdateDto>();
             CreateMap<BookUpdateDto, Book>();
 
         }
