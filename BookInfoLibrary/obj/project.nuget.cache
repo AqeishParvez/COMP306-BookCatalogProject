@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "CPClfiQtKBmvrnXSU7hW58m3PyjiXya4IXr5BcjnuR/9IFXMDO4XTWEY6dhUeKEeMqKR0z+Bz/0bJ5InA85Z/w==",
+  "dgSpecHash": "LpcTc6glGraZOTrrFEWVMmcep8UUGrb5Yftjt+QFplT44als1vM5EW0JuO+Hs0PKBTmQ3W0zGOTw98JOko51DQ==",
   "success": true,
   "projectFilePath": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookInfoLibrary\\BookInfoLibrary.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\mongodb.bson\\2.22.0\\mongodb.bson.2.22.0.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],

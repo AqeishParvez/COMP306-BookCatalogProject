@@ -13,6 +13,7 @@ using static System.Reflection.Metadata.BlobBuilder;
 using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 using Microsoft.AspNetCore.JsonPatch;
 using MongoDB.Bson;
+using Amazon.S3;
 
 namespace BookCatalogAPI.Controllers
 {
@@ -22,11 +23,13 @@ namespace BookCatalogAPI.Controllers
     {
         private readonly IBookInfoRepository _bookInfoRepository;
         private readonly IMapper _mapper;
+        private readonly IAmazonS3 _s3Client;
 
-        public BooksController(IBookInfoRepository bookInfoRepository, IMapper mapper)
+        public BooksController(IBookInfoRepository bookInfoRepository, IMapper mapper, IAmazonS3 s3Client)
         {
             _bookInfoRepository = bookInfoRepository;
             _mapper = mapper;
+            _s3Client = s3Client;
         }
 
         // GET: api/Books
@@ -57,7 +60,7 @@ namespace BookCatalogAPI.Controllers
 
         // PUT: api/Books/5
         [HttpPut("{Id}")]
-        public async Task<ActionResult<BookDto>> UpdateBook(string Id, [FromBody] BookUpdateDto bookUpdateDto)
+        public async Task<ActionResult<BookDto>> UpdateBook(string Id, [FromBody] BookUpdateDto bookUpdateDto, IFormFile pdfFile)
         {
             var existingBook = await _bookInfoRepository.GetBookByIdAsync(Id);
 
@@ -68,12 +71,32 @@ namespace BookCatalogAPI.Controllers
 
             _mapper.Map(bookUpdateDto, existingBook);
 
+            if (pdfFile != null && pdfFile.Length > 0)
+            {
+                // Upload the new file to S3
+                var s3Key = $"books/{ObjectId.GenerateNewId()}.pdf"; // Adjust the key as needed
+                using (var fileStream = pdfFile.OpenReadStream())
+                {
+                    var putObjectRequest = new Amazon.S3.Model.PutObjectRequest
+                    {
+                        BucketName = "bookreadingbucket",
+                        Key = s3Key,
+                        InputStream = fileStream
+                    };
+
+                    await _s3Client.PutObjectAsync(putObjectRequest);
+                }
+
+                existingBook.PdfFilePath = s3Key; // Update the S3 key in the database
+            }
+
             await _bookInfoRepository.UpdateBookAsync(Id, existingBook);
 
             var updatedBookDto = _mapper.Map<BookDto>(existingBook);
 
             return Ok(updatedBookDto);
         }
+
 
 
         [HttpPatch("{Id}")]
@@ -142,8 +165,6 @@ namespace BookCatalogAPI.Controllers
                 isPatched = true;
             }
 
-            // Add more operations for other properties as needed
-
             // Return true if patch operations were successfully applied
             return isPatched;
         }
@@ -153,9 +174,31 @@ namespace BookCatalogAPI.Controllers
 
         // POST: api/Books
         [HttpPost]
-        public async Task<ActionResult<BookDto>> AddBook([FromBody] BookCreateDto bookCreateDto)
+        public async Task<ActionResult<BookDto>> AddBook([FromBody] BookCreateDto bookCreateDto, IFormFile pdfFile)
         {
+            if (pdfFile == null || pdfFile.Length == 0)
+            {
+                return BadRequest("Pdf file is required.");
+            }
+
             var book = _mapper.Map<Book>(bookCreateDto);
+
+            // Upload the file to S3
+            var s3Key = $"book/{ObjectId.GenerateNewId()}.pdf";
+            using (var fileStream = pdfFile.OpenReadStream())
+            {
+                var putObjectRequest = new Amazon.S3.Model.PutObjectRequest
+                {
+                    BucketName = "bookreadingbucket",
+                    Key = s3Key,
+                    InputStream = fileStream
+                };
+
+                await _s3Client.PutObjectAsync(putObjectRequest);
+            }
+
+            book.PdfFilePath = s3Key; // Save the S3 key in the database
+
             await _bookInfoRepository.AddBookAsync(book);
 
             var bookDto = _mapper.Map<BookDto>(book);
@@ -172,6 +215,18 @@ namespace BookCatalogAPI.Controllers
             if (existingBook == null)
             {
                 return NotFound();
+            }
+
+            // Delete the file from S3
+            if (!string.IsNullOrEmpty(existingBook.PdfFilePath))
+            {
+                var deleteObjectRequest = new Amazon.S3.Model.DeleteObjectRequest
+                {
+                    BucketName = "bookreadingbucket",
+                    Key = existingBook.PdfFilePath
+                };
+
+                await _s3Client.DeleteObjectAsync(deleteObjectRequest);
             }
 
             await _bookInfoRepository.DeleteBookAsync(Id);
