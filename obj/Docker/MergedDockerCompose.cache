@@ -1,0 +1,18 @@
+name: dockercompose16644044034499034809
+services:
+  bookcatalogapi:
+    build:
+      context: G:\C# Workspace\Programming 3\ASP.NET Core\BookCatalogAPI
+      dockerfile: BookCatalogAPI/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: bookcatalogapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose16644044034499034809_default

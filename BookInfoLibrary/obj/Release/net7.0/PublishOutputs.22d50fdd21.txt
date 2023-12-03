@@ -1,0 +1,4 @@
+G:\C# Workspace\Programming 3\ASP.NET Core\BookCatalogAPI\publish\BookInfoLibrary.dll
+G:\C# Workspace\Programming 3\ASP.NET Core\BookCatalogAPI\publish\BookInfoLibrary.deps.json
+G:\C# Workspace\Programming 3\ASP.NET Core\BookCatalogAPI\publish\BookInfoLibrary.pdb
+G:\C# Workspace\Programming 3\ASP.NET Core\BookCatalogAPI\publish\MongoDB.Bson.dll

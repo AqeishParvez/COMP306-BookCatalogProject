@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookCatalogAPI", "BookCatal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookInfoLibrary", "BookInfoLibrary\BookInfoLibrary.csproj", "{2E416874-758A-4E3D-A572-0E0E93823185}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalogClient", "BookCatalogClient\BookCatalogClient.csproj", "{DF73D81E-EAC2-4680-8C4B-C506C732BF7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookCatalogClient", "BookCatalogClient\BookCatalogClient.csproj", "{DF73D81E-EAC2-4680-8C4B-C506C732BF7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

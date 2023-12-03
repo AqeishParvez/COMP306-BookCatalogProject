@@ -1,0 +1,381 @@
+{
+  "Files": [
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\BookCatalogClient.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BookCatalogClient.bundle.scp.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\js\\Custom.js",
+      "PackagePath": "staticwebassets\\js\\Custom.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\altText_add.svg",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\altText_add.svg"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\altText_done.svg",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\altText_done.svg"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\annotation-check.svg",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\annotation-check.svg"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\annotation-comment.svg",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\annotation-comment.svg"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\annotation-help.svg",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\annotation-help.svg"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\annotation-insert.svg",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\annotation-insert.svg"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\annotation-key.svg",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\annotation-key.svg"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\annotation-newparagraph.svg",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\annotation-newparagraph.svg"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\annotation-noicon.svg",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\annotation-noicon.svg"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\annotation-note.svg",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\annotation-note.svg"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\annotation-paperclip.svg",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\annotation-paperclip.svg"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\annotation-paragraph.svg",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\annotation-paragraph.svg"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\annotation-pushpin.svg",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\annotation-pushpin.svg"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\editor-toolbar-delete.svg",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\editor-toolbar-delete.svg"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\images\\loading-icon.gif",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\images\\loading-icon.gif"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\pdf.min.mjs",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\pdf.min.mjs"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\pdf.mjs",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\pdf.mjs"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\pdf.mjs.map",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\pdf.mjs.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\pdf.sandbox.min.mjs",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\pdf.sandbox.min.mjs"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\pdf.sandbox.mjs",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\pdf.sandbox.mjs"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\pdf.sandbox.mjs.map",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\pdf.sandbox.mjs.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\pdf.worker.min.mjs",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\pdf.worker.min.mjs"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\pdf.worker.mjs",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\pdf.worker.mjs"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\pdf.worker.mjs.map",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\pdf.worker.mjs.map"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\pdf_viewer.css",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\pdf_viewer.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\pdf_viewer.min.css",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\pdf_viewer.min.css"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\pdf_viewer.mjs",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\pdf_viewer.mjs"
+    },
+    {
+      "Id": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\wwwroot\\lib\\pdf.js\\pdf_viewer.mjs.map",
+      "PackagePath": "staticwebassets\\lib\\pdf.js\\pdf_viewer.mjs.map"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.BookCatalogClient.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.build.BookCatalogClient.props",
+      "PackagePath": "build\\BookCatalogClient.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BookCatalogClient.props",
+      "PackagePath": "buildMultiTargeting\\BookCatalogClient.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildTransitive.BookCatalogClient.props",
+      "PackagePath": "buildTransitive\\BookCatalogClient.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -126,6 +126,7 @@ namespace BookCatalogClient.Controllers
 			return View();
 		}
 
+
         // GET: BooksController/Delete/5
         [HttpGet]
         public async Task<IActionResult> Delete(string id)

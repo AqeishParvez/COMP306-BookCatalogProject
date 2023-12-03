@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "f+2/jfmzO2EindsQgYGdMMG6Mdd/Jt49hcmqAUsEnyMELPnhmIOwXNPAEsIg/M/t5/bjWkMrc/GMtRlSAWUeMw==",
+  "dgSpecHash": "FkrIzCsLHemagiccaoIIU6NtKjkli11g4VK5Bfhd3qJFKHJ4RtkRQbLzPxgrqUGkkplysU4dCXC0GBG1Ww8+XQ==",
   "success": true,
   "projectFilePath": "G:\\C# Workspace\\Programming 3\\ASP.NET Core\\BookCatalogAPI\\BookCatalogClient\\BookCatalogClient.csproj",
   "expectedPackageFiles": [
